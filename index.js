@@ -31,3 +31,21 @@ return longestWord1
 
     console.log(longestWord1(textTwo));
     
+// 2) Check for Arithmetic, Geometric or no patterns
+
+function mathSequence (array) {
+    let arithmetic = []
+    let geometric = []
+
+    for (let i = 1; i <array.length; i ++) {
+        let arithNumber = array[i] - array[i - 1]
+        arithmetic.push(arithNumber)
+
+        let geoNumber = array[i] / array[i - 1]
+        geometric.push(geoNumber)
+    }
+    console.log(`A: ${arithmetic}`);
+    console.log(`B: ${geometric}`);
+    
+}
+console.log(mathSequence([2,4,6]));
